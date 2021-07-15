@@ -9,3 +9,6 @@ Quando eu passo o nome de alguma cidade (em inglês),
 ela bate nesse endereço: https://www.metaweather.com/api/location/search/?query=${city}
 pega o Woeid da cidade e em seguida vai nesse endereço: https://www.metaweather.com/api/location/${woeid}/
 Me retornando o nome da cidade e a sua temperatura atual em Celsius e Fahrenheits.
+
+Para acessar o Swagger da aplicação, rode ela em ambiente local e acesse o link:
+http://localhost:8080/swagger-ui.html#/
