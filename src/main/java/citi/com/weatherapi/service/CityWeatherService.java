@@ -21,7 +21,6 @@ public class CityWeatherService {
                 restTemplate.getForObject(base_url + cityName, City[].class);
 
         Integer searchByWoeid = city[0].getWoeid();
-        System.out.println(searchByWoeid);
 
         restTemplate = new RestTemplate();
 
@@ -29,7 +28,6 @@ public class CityWeatherService {
         Woeid response =
                 restTemplate.getForObject(base_url + searchByWoeid, Woeid.class);
         List<ConsolidatedWeather> consolidatedWeathers = response.getConsolidatedWeathers();
-        System.out.println(consolidatedWeathers);
 
         ConsolidatedWeather recentWeather = consolidatedWeathers.get(consolidatedWeathers.size() -1);
         CityWeatherDTO weatherDTO = new CityWeatherDTO();
